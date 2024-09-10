@@ -1,0 +1,59 @@
+/* LandingPage.css */
+.landing-page {
+  background-image: url('./nicola-styles-qWFMm1iRJkM-unsplash.jpg'); /* Replace with the actual path */
+  background-size: cover;  /* Make sure the image covers the entire area */
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  animation: fadeIn 2s ease forwards;
+}
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+.landing-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay for better text contrast */
+}
+
+.text-center {
+  position: relative;
+  z-index: 1; /* Make sure text is on top of overlay */
+  color: #fff; /* Set the text color to white */
+}
+
+h1 {
+  font-size: 4rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Add a shadow to the text */
+}
+
+.lead {
+  font-size: 1.5rem;
+  color: #dcdcdc;
+}
+
+.btn {
+  margin-top: 20px;
+}
+
+.btn-primary, .btn-secondary {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+  border-radius: 50px; /* Rounded buttons for a modern look */
+  transition: transform 0.3s ease; /* Animation for hover effect */
+}
+
+.btn-primary:hover, .btn-secondary:hover {
+  transform: scale(1.05); /* Slight zoom-in effect on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
